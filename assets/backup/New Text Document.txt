@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sachintha Jayarathna | Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* =========================================
+           1. CSS Variables & Theming (Light/Dark)
+           ========================================= */
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #333333;
+            --text-light: #666666;
+            --primary-color: #2563eb;
+            --primary-hover: #1d4ed8;
+            --card-bg: #f8fafc;
+            --border-color: #e2e8f0;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --transition: all 0.3s ease;
+        }
+
+        [data-theme="dark"] {
+            --bg-color: #0f172a;
+            --text-color: #f8fafc;
+            --text-light: #cbd5e1;
+            --primary-color: #3b82f6;
+            --primary-hover: #60a5fa;
+            --card-bg: #1e293b;
+            --border-color: #334155;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
+        }
+
+        /* =========================================
+           2. General Reset & Base Styles
+           ========================================= */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            transition: var(--transition);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        section {
+            padding: 80px 5%; 
+            }
+
+        .section-title {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            font-weight: 700;
+        }
+
+        .section-title span {
+            color: var(--primary-color);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 24px;
+            background-color: var(--primary-color);
+            color: #fff;
+            border-radius: 8px;
+            font-weight: 500;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: var(--primary-hover);
+            transform: translateY(-2px);
+            color: #fff;
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--primary-color);
+            color: #fff;
+        }
+
+        /* =========================================
+           3. Header & Navigation
+           ========================================= */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 15px 5%;
+            background-color: var(--bg-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            transition: var(--transition);
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+            align-items: center;
+        }
+
+        .nav-links li a {
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: var(--transition);
+        }
+
+        .nav-links li a:hover {
+            color: var(--primary-color);
+        }
+
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .theme-toggle {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--text-color);
+            transition: var(--transition);
+        }
+
+        .hamburger {
+            display: none;
+            font-size: 2rem;
+            cursor: pointer;
+            color: var(--text-color);
+        }
+
+        /* =========================================
+           4. Hero Section
+           ========================================= */
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            min-height: 100vh;
+            padding-top: 100px;
+        }
+
+        .hero-content {
+            max-width: 600px;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+
+        .hero-content h3 {
+            font-size: 1.8rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+            color: var(--text-light);
+        }
+
+        .hero-content p {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            margin-bottom: 2rem;
+        }
+
+        .typing-text {
+            color: var(--primary-color);
+            font-weight: 700;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .hero-image {
+            width: 350px;
+            height: 350px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 5px solid var(--primary-color);
+            box-shadow: var(--shadow);
+            animation: float 4s ease-in-out infinite;
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0); }
+        }
+
+        /* =========================================
+           5. Reusable Timeline (Exp, Ed, Involvements)
+           ========================================= */
+       .timeline {
+            max-width: 1200px; 
+            margin: 0 auto;
+            position: relative;
+            }
+
+        .timeline-item {
+            background-color: var(--card-bg);
+            padding: 2rem;
+            border-radius: 10px;
+            margin-bottom: 1.5rem;
+            box-shadow: var(--shadow);
+            border-left: 5px solid var(--primary-color);
+            transition: var(--transition);
+        }
+
+        .timeline-item:hover {
+            transform: translateX(10px);
+        }
+
+        .timeline-item h4 {
+            font-size: 1.3rem;
+            margin-bottom: 0.2rem;
+        }
+
+        .timeline-item h5 {
+            font-size: 1rem;
+            color: var(--text-color);
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .timeline-item .date {
+            color: var(--primary-color);
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .timeline-item p, .timeline-item ul {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+        
+        .timeline-item ul {
+            padding-left: 1.2rem;
+            list-style-type: disc;
+        }
+
+        /* =========================================
+           6. Skills & Certifications Grid
+           ========================================= */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            text-align: center;
+        }
+
+        .grid-card {
+            background-color: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .grid-card:hover {
+            transform: translateY(-5px);
+            border-bottom: 3px solid var(--primary-color);
+        }
+
+        .grid-card h4 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .grid-card p {
+            font-size: 0.85rem;
+            color: var(--text-light);
+        }
+
+        /* =========================================
+           7. Projects Section
+           ========================================= */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background-color: var(--card-bg);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .project-info {
+            padding: 2rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-info h4 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+
+        .project-info p {
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+        }
+
+        .project-role {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        /* =========================================
+           8. Contact & Footer
+           ========================================= */
+        .contact-container {
+            display: flex;
+            gap: 4rem;
+            max-width: 1200px; /* Matched to the new timeline width */
+            margin: 0 auto;
+        }
+
+        .contact-info, .contact-form {
+            flex: 1;
+        }
+
+        .contact-info p {
+            margin-bottom: 1rem;
+            color: var(--text-light);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .contact-form form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 1rem;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            background-color: var(--card-bg);
+            color: var(--text-color);
+            font-size: 1rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background-color: var(--card-bg);
+            border-top: 1px solid var(--border-color);
+        }
+
+        /* =========================================
+           9. Responsive Design
+           ========================================= */
+        @media (max-width: 1100px) {
+            .nav-links { gap: 1rem; }
+            .nav-links li a { font-size: 0.8rem; }
+        }
+
+        @media (max-width: 991px) {
+            header { padding: 15px 5%; }
+            section { padding: 80px 5%; }
+            .hero { flex-direction: column; text-align: center; gap: 3rem; }
+            .hero-buttons { justify-content: center; }
+            .contact-container { flex-direction: column; }
+            .nav-links {
+                position: absolute;
+                top: 100%;
+                left: -100%;
+                width: 100%;
+                height: 100vh;
+                background-color: var(--bg-color);
+                flex-direction: column;
+                justify-content: flex-start;
+                padding-top: 2rem;
+                transition: 0.3s;
+                gap: 2rem;
+            }
+            .nav-links.active { left: 0; }
+            .nav-links li a { font-size: 1.2rem; }
+            .hamburger { display: block; }
+        }
+
+        /* Scroll Animation Classes */
+        .hidden {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+        .show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">SACHINTHA</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#involvements">Involvements</a></li>
+            <li><a href="#skills">Skills & Certifications</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="nav-actions">
+            <a href="/cv/my-cv.pdf" class="btn" download>Download CV</a>
+            <button class="theme-toggle" id="theme-btn">🌙</button>
+            <div class="hamburger" id="hamburger">☰</div>
+        </div>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="hero-content hidden">
+            <h3>Hello, It's Me</h3>
+            <h1>Sachintha Jayarathna</h1>
+            <h3>And I'm a <span class="typing-text" id="typing"></span></h3>
+            <p>A goal-orientated and passionate individual with experience in event management and people leadership. Seeking to leverage my analytical thinking and strong communication skills to drive successful event lifecycles in a reputable organisation.</p>
+            <div class="hero-buttons">
+                <a href="#contact" class="btn">Hire Me</a>
+                <a href="#projects" class="btn btn-outline">View Projects</a>
+            </div>
+        </div>
+        <div class="hero-image hidden">
+            <img src="DP.png" alt="Profile Picture"> 
+        </div>
+    </section>
+
+    <section id="experience">
+        <h2 class="section-title">Work <span>Experience</span></h2>
+        <div class="timeline hidden">
+            <div class="timeline-item">
+                
+                <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.5rem;">
+                    <div>
+                        <h4 style="margin-bottom: 0.2rem;">Bank Trainee</h4>
+                        <h5 style="margin-bottom: 0;">People's Bank - Rattota</h5>
+                    </div>
+                    <img src="PB_LOGO_Pride of the Nation11.png" alt="People's Bank Logo" style="height: 45px; object-fit: contain; margin-left: 15px;">
+                </div>
+
+                <span class="date">10/2022 - 01/2023</span>
+                <ul>
+                    <li>Processed 50+ daily cash transactions with high accuracy.</li>
+                    <li>Maintained 100+ customer records with zero data errors.</li>
+                    <li>Ensured 100% compliance with cash handling procedures.</li>
+                    <li>Delivered customer service, resolving 20+ inquiries daily.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="education">
+        <h2 class="section-title">My <span>Education</span></h2>
+        <div class="timeline hidden">
+            <div class="timeline-item">
+                <h4>BSc Honours in Business Information Systems</h4>
+                <h5>University of Sri Jayewardenepura</h5>
+                <span class="date">2023 - Present</span>
+                <p>Department of Information Technology, Faculty of Management Studies and Commerce. <br><strong>Current GPA:</strong> 3.58</p>
+            </div>
+            <div class="timeline-item">
+                <h4>GCE Advanced Level</h4>
+                <h5>St Thomas College Matale</h5>
+                <span class="date">Completed 2021</span>
+                <p>3A's including Information and Communication Technology (ICT).</p>
+            </div>
+            <div class="timeline-item">
+                <h4>GCE Ordinary Level</h4>
+                <span class="date">Completed 2018</span>
+                <p>Including Mathematics, achieved 5 'A' passes.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2 class="section-title">Latest <span>Projects</span></h2>
+        <div class="projects-grid hidden">
+            <div class="project-card">
+                <div class="project-info">
+                    <h4>Automated E-Commerce Data Integrity Pipeline</h4>
+                    <span class="project-role">Role: QA & Data Analysis</span>
+                    <p>Developed a Python (Pandas) script to automate data integrity testing for 50+ e-commerce products. Automated defect reporting by integrating directly with Jira for bulk bug creation. Reduced manual testing time by 90%.</p>
+                    <a href="https://www.linkedin.com/posts/sachintha-jayarathna-9a1a782b9_qaautomation-dataanalytics-python-ugcPost-7422201156627718144-MUuM?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEyCuokBQwDzP6dW0fnHmQpDm-UCsCsfp0c" class="btn btn-outline">View Details</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-info">
+                    <h4>Hybrid QA Automation Framework</h4>
+                    <span class="project-role">Role: QA Automation Engineer</span>
+                    <p>A comparative test automation suite designed to evaluate the efficiency of traditional code-based testing versus AI-powered self-healing automation on an e-commerce platform.</p>
+                    <a href="https://github.com/sachinjay4t/Hybrid-QA-Automation-Demo/blob/main/README.md" class="btn btn-outline">GitHub Repository</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-info">
+                    <h4>Online Fine Pay System</h4>
+                    <span class="project-role">Role: Developer</span>
+                    <p>Developed a secure online platform enabling drivers to view and pay traffic fines efficiently.</p>
+                    <a href="#" class="btn btn-outline">View Details</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="involvements">
+        <h2 class="section-title">Extra-Curricular <span>Involvements</span></h2>
+        <div class="timeline hidden">
+            <div class="timeline-item">
+    <h4>Touch the Peak 2025 - Job Fair | CSDS</h4>
+    <h5>Organizing Committee Member</h5>
+    <span class="date">2025</span>
+    <p style="margin-bottom: 1rem;">Coordinated logistics and stakeholder communication for a large-scale career event, supporting 100+ participants while contributing to event promotion.</p>
+    
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin-top: 15px;">
+        
+        <img src="ttp 1.jpeg" alt="Touch the Peak Event 1" style="width: 100%; height: 250px; object-fit: cover; object-position: top; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+        
+        <img src="ttp 2.jpeg" alt="Touch the Peak ID Badge" style="width: 100%; height: 250px; object-fit: cover; object-position: center; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+        
+        <img src="ttp 3.jpeg" alt="Touch the Peak Event 3" style="width: 100%; height: 250px; object-fit: cover; object-position: center; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+        
+        <img src="ttp 4.jpeg" alt="Touch the Peak Banner" style="width: 100%; height: 250px; object-fit: contain; background-color: #fff; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+
+        <img src="ttp 5.jpeg" alt="Touch the Peak Group Photo" style="width: 100%; height: 250px; object-fit: cover; object-position: center; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+    </div>
+</div>
+            <div class="timeline-item">
+                <h4>Monetary and Finance Officer</h4>
+                <h5>Students' Association of Information Technology (S@IT)</h5>
+                <span class="date">2025</span>
+                <p>Managed budgets and financial operations for multiple large-scale events while actively supporting event coordination, promotional campaigns, and audience engagement.</p>
+            </div>
+            <div class="timeline-item">
+                <h4>Sparsha - Talent Show & Musical Event</h4>
+                <h5>Co-Chairperson</h5>
+                <span class="date">2025</span>
+                <p>Led planning, coordination, and idea generation. Managed teams, logistics, and media to successfully deliver an event with 200+ participants.</p>
+            </div>
+            <div class="timeline-item">
+    <style>
+        @keyframes autoSlide {
+            0% { transform: translateX(0); }
+            /* Slides exactly half the width to create a perfect infinite loop */
+            100% { transform: translateX(calc(-50% - 6px)); } 
+        }
+        .photo-slider-container {
+            width: 100%;
+            overflow: hidden;
+            padding: 10px 0;
+        }
+        .photo-slider-track {
+            display: inline-flex;
+            gap: 12px;
+            width: max-content;
+            /* 40s controls the speed. Make it higher for slower, lower for faster */
+            animation: autoSlide 40s linear infinite; 
+        }
+        .photo-slider-track:hover {
+            animation-play-state: paused; /* Pauses when mouse hovers over it */
+        }
+        .slide-item {
+            width: 220px; 
+            height: 180px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            flex-shrink: 0;
+        }
+        .slide-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+        .slide-item img:hover {
+            transform: scale(1.1);
+        }
+    </style>
+
+    <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 10px;">
+        <div>
+            <h4 style="margin-bottom: 0.2rem;">Member</h4>
+            <h5>ISACA Student Group, USJ</h5>
+        </div>
+        <span style="background-color: rgba(37, 99, 235, 0.1); color: var(--primary-color); padding: 5px 15px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; border: 1px solid rgba(37, 99, 235, 0.2);">2023 - 2025</span>
+    </div>
+    
+    <p style="margin: 1rem 0; color: var(--text-light);">Contributed to planning and executing 5+ professional and academic events, supporting stakeholder coordination in IT governance and cybersecurity.</p>
+    
+    <div style="display: flex; flex-direction: column; gap: 12px; margin-top: 20px;">
+        
+        <div class="photo-slider-container">
+            <div class="photo-slider-track">
+                
+                <div class="slide-item"><img src="ss 1.jpeg" alt="Photo 1" style="object-position: top;"></div>
+                <div class="slide-item"><img src="ss 2.jpeg" alt="Photo 2" style="object-position: center;"></div>
+                <div class="slide-item"><img src="ss 3.jpeg" alt="Photo 3" style="object-position: center;"></div>
+                <div class="slide-item"><img src="ss 4.jpeg" alt="Photo 4" style="object-position: center;"></div>
+                <div class="slide-item"><img src="ss 6.jpeg" alt="Photo 6" style="object-position: center;"></div>
+                <div class="slide-item"><img src="ss 7.jpeg" alt="Photo 7" style="object-position: center;"></div>
+                <div class="slide-item"><img src="ss 8.jpeg" alt="Photo 8" style="object-position: top;"></div>
+                <div class="slide-item"><img src="ss 11.jpeg" alt="Photo 11" style="object-position: top;"></div>
+                <div class="slide-item"><img src="ss 12.jpeg" alt="Photo 12" style="object-position: center;"></div>
+                
+                <div class="slide-item"><img src="ss 1.jpeg" alt="Photo 1" style="object-position: top;"></div>
+                <div class="slide-item"><img src="ss 2.jpeg" alt="Photo 2" style="object-position: center;"></div>
+                <div class="slide-item"><img src="ss 3.jpeg" alt="Photo 3" style="object-position: center;"></div>
+                <div class="slide-item"><img src="ss 4.jpeg" alt="Photo 4" style="object-position: center;"></div>
+                <div class="slide-item"><img src="ss 6.jpeg" alt="Photo 6" style="object-position: center;"></div>
+                <div class="slide-item"><img src="ss 7.jpeg" alt="Photo 7" style="object-position: center;"></div>
+                <div class="slide-item"><img src="ss 8.jpeg" alt="Photo 8" style="object-position: top;"></div>
+                <div class="slide-item"><img src="ss 11.jpeg" alt="Photo 11" style="object-position: top;"></div>
+                <div class="slide-item"><img src="ss 12.jpeg" alt="Photo 12" style="object-position: center;"></div>
+
+            </div>
+        </div>
+        
+    </div>
+</div>
+        </div>
+        
+    </div>
+</div>
+        </div>
+    </div>
+</div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2 class="section-title">Skills & <span>Certifications</span></h2>
+        
+        <h3 style="text-align:center; margin-bottom: 2rem;">Core Skills</h3>
+        <div class="grid-container hidden" style="margin-bottom: 4rem;">
+            <div class="grid-card"><h4>Leadership & Teamwork</h4></div>
+            <div class="grid-card"><h4>Problem Solving</h4></div>
+            <div class="grid-card"><h4>Figma & Canva</h4></div>
+            <div class="grid-card"><h4>Jira</h4></div>
+            <div class="grid-card"><h4>Python (Pandas)</h4></div>
+            <div class="grid-card"><h4>Selenium & UI/UX</h4></div>
+        </div>
+
+        <h3 style="text-align:center; margin-bottom: 2rem;">Certifications & Achievements</h3>
+        <div class="grid-container hidden">
+            <div class="grid-card">
+                <h4>Cyber Security Fundamentals</h4>
+                <p>APNIC Academy (2025)</p>
+            </div>
+            <div class="grid-card">
+                <h4>Operating Systems Basics</h4>
+                <p>Cisco Networking Academy (2025)</p>
+            </div>
+            <div class="grid-card">
+                <h4>Selenium Web Driver with Java</h4>
+                <p>TestAutomationu.com</p>
+            </div>
+            <div class="grid-card">
+                <h4>Modern Functional Test Automation</h4>
+                <p>TestAutomationu.com (Visual AI)</p>
+            </div>
+            <div class="grid-card">
+                <h4>Introduction to Java/HTML/CSS/SQL</h4>
+                <p>Sololearn</p>
+            </div>
+            <div class="grid-card">
+                <h4>1st Runner-Up (Photography)</h4>
+                <p>Clean Waste Competition (2025)</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2 class="section-title">Contact <span>Me</span></h2>
+        <div class="contact-container hidden">
+            <div class="contact-info">
+                <h3>Let's Connect</h3>
+                <p>I am actively looking for new opportunities. Whether you have a question or just want to say hi, I'll try my best to get back to you!</p>
+                <br>
+                <p>📍 Nugegoda, Sri lanka</p>
+                <p>📧 sachinthakavindu567@gmail.com</p>
+                <p>📞 +94 76 197 1361</p>
+            </div>
+            <div class="contact-form">
+                <form action="#">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea rows="5" placeholder="Your Message" required></textarea>
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Sachintha Jayarathna. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // --- Dark/Light Mode Toggle ---
+        const themeBtn = document.getElementById('theme-btn');
+        const root = document.documentElement;
+        
+        if (localStorage.getItem('theme') === 'dark') {
+            root.setAttribute('data-theme', 'dark');
+            themeBtn.textContent = '☀️';
+        }
+
+        themeBtn.addEventListener('click', () => {
+            if (root.getAttribute('data-theme') === 'dark') {
+                root.removeAttribute('data-theme');
+                localStorage.setItem('theme', 'light');
+                themeBtn.textContent = '🌙';
+            } else {
+                root.setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
+                themeBtn.textContent = '☀️';
+            }
+        });
+
+        // --- Mobile Hamburger Menu ---
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.querySelector('.nav-links');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        document.querySelectorAll('.nav-links li a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // --- Typing Animation Effect ---
+        const typingText = document.getElementById('typing');
+        const words = ['Undergraduate', 'QA Automation Engineer', 'Event Manager', 'Data Analyst'];
+        let wordIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+
+        function type() {
+            const currentWord = words[wordIndex];
+            if (isDeleting) {
+                typingText.textContent = currentWord.substring(0, charIndex - 1);
+                charIndex--;
+            } else {
+                typingText.textContent = currentWord.substring(0, charIndex + 1);
+                charIndex++;
+            }
+
+            let typeSpeed = isDeleting ? 50 : 100;
+
+            if (!isDeleting && charIndex === currentWord.length) {
+                typeSpeed = 2000;
+                isDeleting = true;
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                wordIndex = (wordIndex + 1) % words.length;
+                typeSpeed = 500;
+            }
+
+            setTimeout(type, typeSpeed);
+        }
+        
+        document.addEventListener('DOMContentLoaded', type);
+
+        // --- Scroll Reveal Animation ---
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: "0px 0px -50px 0px"
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.hidden').forEach((el) => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>

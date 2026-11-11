@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sachintha Jayarathna — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+<!-- ============================================================
+     NAVBAR
+============================================================ -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="#hero" class="nav-logo syne">S<span>.</span>J</a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#involvement">Activities</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav-controls">
+      <a href="assets/pdf/SJ.pdf" class="btn-cv" download>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Download CV
+      </a>
+      <button class="theme-toggle" id="theme-btn" title="Toggle theme">🌙</button>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<div id="mobile-menu">
+  <a href="#about">About</a>
+  <a href="#experience">Experience</a>
+  <a href="#education">Education</a>
+  <a href="#projects">Projects</a>
+  <a href="#skills">Skills</a>
+  <a href="#involvement">Activities</a>
+  <a href="#contact">Contact</a>
+</div>
+
+<!-- ============================================================
+     HERO
+============================================================ -->
+<section id="hero">
+  <div class="hero-inner container">
+    <div class="hero-content">
+      <div class="hero-badge">Available for Opportunities</div>
+      <h1 class="hero-name syne">Sachintha<br><span class="line2">Jayarathna</span></h1>
+      <p class="hero-typing">I'm a <span id="typed-text"></span><span class="cursor"></span></p>
+      <p class="hero-desc">
+        A goal-oriented and ISTQB CTFL-certified Quality Engineering Intern with hands-on experience driving test automation using Playwright and TypeScript, ensuring high-quality software delivery within Agile teams.
+      </p>
+      <div class="hero-ctas">
+        <a href="#contact" class="btn-primary">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.17h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Contact Me
+        </a>
+        <a href="#projects" class="btn-outline">
+          View Projects
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><div class="stat-n">3.31</div><div class="stat-l">GPA</div></div>
+        <div class="stat"><div class="stat-n">5+</div><div class="stat-l">Events Led</div></div>
+        <div class="stat"><div class="stat-n">3</div><div class="stat-l">Projects</div></div>
+        <div class="stat"><div class="stat-n">90%</div><div class="stat-l">Test Time Saved</div></div>
+      </div>
+    </div>
+    <div class="hero-image-wrap">
+      <div class="hero-image-frame">
+        <img src="assets/photos/profile/DP.png" alt="Sachintha Jayarathna" />
+      </div>
+      <div class="hero-img-badge">
+        <div class="icon">🎓</div>
+        <div><div class="label">Currently at</div><div class="value">Pearson Lanka (Pvt. Ltd.)</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     ABOUT
+============================================================ -->
+<section id="about">
+  <div class="container">
+    <div class="section-label">Who I Am</div>
+    <h2 class="section-title">About <span class="accent">Me</span></h2>
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <p>A goal-oriented and ISTQB CTFL-certified Quality Engineering Intern with hands-on experience driving test automation using Playwright and TypeScript. Proven track record of developing end-to-end automated test suites and ensuring high-quality software delivery within Agile teams.</p>
+        <p>Seeking to leverage my analytical thinking, technical expertise in modern automation frameworks, and adaptability to new AI trends to drive robust quality assurance lifecycles in a reputable organization, alongside strong experience in people leadership and large-scale university event coordination.</p>
+        <div class="about-details">
+          <div class="detail-item"><div class="d-label">📍 Location</div><div class="d-value">Nugegoda, Sri Lanka</div></div>
+          <div class="detail-item"><div class="d-label">📧 Email</div><div class="d-value" style="font-size:12px;">sachinthakavindu567@gmail.com</div></div>
+          <div class="detail-item"><div class="d-label">📱 Phone</div><div class="d-value">+94 76 197 1361</div></div>
+          <div class="detail-item"><div class="d-label">🎓 Degree</div><div class="d-value">BSc (Hons) BIS</div></div>
+        </div>
+      </div>
+      <div class="reveal" style="transition-delay:0.15s">
+        <h3 style="font-family:'Syne',sans-serif;font-size:1.1rem;font-weight:700;margin-bottom:24px;">Languages</h3>
+        <div class="lang-list">
+          <div class="lang-item"><span class="lang-name">Sinhala</span><div class="lang-bar"><div class="lang-fill" data-w="1"></div></div><span class="lang-level">Fluent</span></div>
+          <div class="lang-item"><span class="lang-name">English</span><div class="lang-bar"><div class="lang-fill" data-w="0.9"></div></div><span class="lang-level">Fluent</span></div>
+          <div class="lang-item"><span class="lang-name">Korean</span><div class="lang-bar"><div class="lang-fill" data-w="0.3"></div></div><span class="lang-level">Basic</span></div>
+        </div>
+        <div style="margin-top:36px;">
+          <h3 style="font-family:'Syne',sans-serif;font-size:1.1rem;font-weight:700;margin-bottom:16px;">Volunteering</h3>
+          <div class="involve-card" style="padding:16px;">
+            <div class="involve-icon">🌊</div>
+            <div><div class="involve-title">Coastal Cleanup – 2025</div><div class="involve-org">Wellawatta Beach</div><div class="involve-desc">Environmental volunteering initiative contributing to coastal conservation.</div></div>
+          </div>
+        </div>
+        <div style="margin-top:20px;">
+          <div class="involve-card" style="padding:16px;border-color:var(--accent)40;">
+            <div class="involve-icon">🏆</div>
+            <div><div class="involve-title">1st Runner-Up – Photography</div><div class="involve-org">Clean Waste Photography Competition 2025</div><div class="involve-desc">Won in the Mobile Phone category out of competitive field.</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     WORK EXPERIENCE
+============================================================ -->
+<section id="experience">
+  <div class="container">
+    <div class="section-label">Career</div>
+    <h2 class="section-title">Work <span class="accent">Experience</span></h2>
+    <div class="timeline reveal">
+
+      <div class="tl-item">
+        <div class="tl-header">
+          <div>
+            <div class="tl-title">Quality Assurance Engineering Intern</div>
+            <div class="tl-company">Pearson Lanka — Colombo</div>
+          </div>
+          <img src="assets/photos/profile/pearson_logo.png" alt="Pearson Logo" style="height: 40px; object-fit: contain; border-radius: 6px;">
+        </div>
+        <span class="tl-date" style="display: inline-block; margin-bottom: 8px;">Jun 2026 – Present</span>
+        <ul class="tl-list">
+          <li>Developed automated end-to-end test suite using Playwright and TypeScript, reducing manual testing effort by 40%.</li>
+          <li>Performed defect identification, reporting, tracking, and analysis within an Agile environment.</li>
+          <li>Bulk uploaded test cases using Zephyr, reducing manual effort and improving test management efficiency.</li>
+          <li>Handled Git merge conflicts and resolved code integration issues using Git/GitLab.</li>
+          <li>Used Python scripts to automate test data generation.</li>
+        </ul>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-header">
+          <div>
+            <div class="tl-title">Bank Trainee</div>
+            <div class="tl-company">People's Bank — Rattota</div>
+          </div>
+          <img src="assets/photos/profile/PB_LOGO_Pride of the Nation11.png" alt="People's Bank Logo" style="height: 40px; object-fit: contain; background: white; padding: 4px 8px; border-radius: 6px;">
+        </div>
+        <span class="tl-date" style="display: inline-block; margin-bottom: 8px;">Oct 2022 – Jan 2023</span>
+        <ul class="tl-list">
+          <li>Processed 50+ daily cash transactions with high accuracy</li>
+          <li>Maintained 100+ customer records with zero data errors</li>
+          <li>Ensured 100% compliance with cash handling procedures</li>
+          <li>Delivered customer service, resolving 20+ inquiries daily</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     EDUCATION
+============================================================ -->
+<section id="education">
+  <div class="container">
+    <div class="section-label">Academic</div>
+    <h2 class="section-title">My <span class="accent">Education</span></h2>
+    <div class="edu-grid">
+      <div class="edu-card reveal">
+        <div class="edu-icon">🎓</div>
+        <div class="edu-degree">BSc Honours in Business Information Systems</div>
+        <div class="edu-inst">University of Sri Jayewardenepura</div>
+        <div class="edu-year">Dept. of Information Technology · Faculty of Management Studies & Commerce</div>
+        <div class="edu-gpa">Current GPA: 3.31</div>
+        <div class="edu-year" style="margin-top:8px;">2023 – Present</div>
+      </div>
+      <div class="edu-card reveal" style="transition-delay:0.1s">
+        <div class="edu-icon">📚</div>
+        <div class="edu-degree">GCE Advanced Level</div>
+        <div class="edu-inst">St Thomas College, Matale</div>
+        <div class="edu-year">3 A's including ICT</div>
+        <div class="edu-year" style="margin-top:8px;">2021</div>
+      </div>
+      <div class="edu-card reveal" style="transition-delay:0.2s">
+        <div class="edu-icon">🏫</div>
+        <div class="edu-degree">GCE Ordinary Level</div>
+        <div class="edu-inst">Mt siri seevali vidyalaya Matale</div>
+        <div class="edu-year">5 A's including Mathematics</div>
+        <div class="edu-year" style="margin-top:8px;">2018</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SKILLS
+============================================================ -->
+<section id="skills">
+  <div class="container">
+    <div class="section-label">Capabilities</div>
+    <h2 class="section-title">Skills &amp; <span class="accent">Tools</span></h2>
+    <div class="skills-grid">
+      <div class="skill-category reveal">
+        <div class="skill-category-title"><span>⚙️</span> Tools &amp; Technology</div>
+        <div class="skill-tags">
+          <span class="skill-tag">Playwright (Automation)</span><span class="skill-tag">TypeScript</span>
+          <span class="skill-tag">Zephyr</span><span class="skill-tag">GitLab</span>
+          <span class="skill-tag">Jira</span><span class="skill-tag">Python</span>
+          <span class="skill-tag">MySQL</span><span class="skill-tag">HTML/CSS</span>
+        </div>
+      </div>
+      <div class="skill-category reveal" style="transition-delay:0.1s">
+        <div class="skill-category-title"><span>🤖</span> AI Tools</div>
+        <div class="skill-tags">
+          <span class="skill-tag">Cursor</span><span class="skill-tag">Antigravity</span>
+          <span class="skill-tag">Claude AI</span><span class="skill-tag">Gemini AI</span>
+        </div>
+      </div>
+      <div class="skill-category reveal" style="transition-delay:0.2s">
+        <div class="skill-category-title"><span>🧠</span> Soft Skills</div>
+        <div class="skill-tags">
+          <span class="skill-tag">Leadership</span><span class="skill-tag">Problem Solving</span>
+          <span class="skill-tag">Teamwork</span><span class="skill-tag">Time Management</span>
+          <span class="skill-tag">Critical Thinking</span><span class="skill-tag">Flexibility</span>
+          <span class="skill-tag">Self Learning</span>
+        </div>
+      </div>
+      <div class="skill-category reveal" style="transition-delay:0.3s">
+        <div class="skill-category-title"><span>🎨</span> Design &amp; Security</div>
+        <div class="skill-tags">
+          <span class="skill-tag">Figma</span><span class="skill-tag">google flow Ai</span>
+          <span class="skill-tag">Canva</span><span class="skill-tag">MS Office</span>
+          <span class="skill-tag">Cybersecurity Fundamentals</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     PROJECTS
+============================================================ -->
+<section id="projects">
+  <div class="container">
+    <div class="section-label">Portfolio</div>
+    <h2 class="section-title">Featured <span class="accent">ProJects</span></h2>
+    <div class="projects-grid">
+      <div class="project-card reveal">
+        <div class="project-thumb">💳</div>
+        <div class="project-body">
+          <div class="project-title">Online Fine Pay System</div>
+          <div class="project-desc">A secure online platform enabling drivers to view and pay traffic fines efficiently, reducing friction in government service access.</div>
+          <div class="project-stack">
+            <span class="tech-tag">Web</span><span class="tech-tag">Security</span><span class="tech-tag">Database</span>
+          </div>
+          <div class="project-links">
+            <a href="https://drive.google.com/drive/folders/1KZctjI_cxNwCdC5VYS7Oy2fbr8VLymEC" class="proj-link">Details</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card reveal" style="transition-delay:0.1s">
+        <div class="project-thumb">🎨</div>
+        <div class="project-body">
+          <div class="project-title">UI/UX Mini Project – Sri Lanka Inland Revenue Department (IRD) Website</div>
+          <div class="project-desc">Collaborated in brainstorming and sketching sessions to ideate user-centric design solutions for the existing IRD website. Developed comprehensive wireframes using Figma, focusing on optimizing the Taxpayer Registration and Tax Calendar user flows to reduce cognitive load. Executed final design refinements based on continuous feedback, contributing to a highly accessible interface that achieved a 100% task success rate during usability testing.</div>
+          <div class="project-stack">
+            <span class="tech-tag">Figma</span><span class="tech-tag">UI/UX</span>
+            <span class="tech-tag">Wireframing</span><span class="tech-tag">Usability Testing</span>
+          </div>
+          <div class="project-links"><a href="https://drive.google.com/drive/folders/1oG_ev5MxJTbcHKPM2E3asi_IpJwdDreH?usp=sharing" class="proj-link">Details</a></div>
+        </div>
+      </div>
+
+      <div class="project-card reveal" style="transition-delay:0.2s">
+        <div class="project-thumb">🤖</div>
+        <div class="project-body">
+          <div class="project-title">Hybrid QA Automation Framework</div>
+          <div class="project-desc">Comparative test automation suite evaluating traditional code-based testing vs AI-powered self-healing automation on an e-commerce platform.</div>
+          <div class="project-stack">
+            <span class="tech-tag">Selenium</span><span class="tech-tag">Java</span>
+            <span class="tech-tag">Visual AI</span><span class="tech-tag">TestAutomation</span>
+          </div>
+          <div class="project-links"><a href="https://github.com/sachinjay4t/Hybrid-QA-Automation-Demo/blob/main/README.md" class="proj-link">Details</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     ACTIVITIES & INVOLVEMENT
+============================================================ -->
+<section id="involvement">
+  <div class="container">
+    <div class="section-label">Beyond Academics</div>
+    <h2 class="section-title">Activities &amp; <span class="accent">Involvement</span></h2>
+
+    <div class="timeline reveal" style="margin-bottom: 40px;">
+        
+      <div class="tl-item">
+        <div class="tl-header">
+          <div>
+            <div class="tl-title">Organizing Committee Member</div>
+            <div class="tl-company">Touch the Peak 2025 – Job Fair | CSDS</div>
+          </div>
+          <span class="tl-date" style="align-self: flex-start;">2025</span>
+        </div>
+        <p style="color: var(--text-muted); font-size: 14px; margin-bottom: 16px;">Coordinated logistics and stakeholder communication for a large-scale career event, supporting 100+ participants while contributing to event promotion.</p>
+        
+        <div class="photo-slider-container">
+          <div class="photo-slider-track">
+            <div class="slide-item"><img src="assets/photos/events/touch-the-peak/ttp 1.jpeg" alt="Event" style="object-position: top;"></div>
+            <div class="slide-item"><img src="assets/photos/events/touch-the-peak/ttp 2.jpeg" alt="Event" style="object-position: center;"></div>
+            <div class="slide-item"><img src="assets/photos/events/touch-the-peak/ttp 3.jpeg" alt="Event" style="object-position: center;"></div>
+            <div class="slide-item"><img src="assets/photos/events/touch-the-peak/ttp 4.jpeg" alt="Event" style="object-position: center; background: #fff; object-fit: contain;"></div>
+            <div class="slide-item"><img src="assets/photos/events/touch-the-peak/ttp 5.jpeg" alt="Event" style="object-position: center;"></div>
+
+            <div class="slide-item"><img src="assets/photos/events/touch-the-peak/ttp 1.jpeg" alt="Event" style="object-position: top;"></div>
+            <div class="slide-item"><img src="assets/photos/events/touch-the-peak/ttp 2.jpeg" alt="Event" style="object-position: center;"></div>
+            <div class="slide-item"><img src="assets/photos/events/touch-the-peak/ttp 3.jpeg" alt="Event" style="object-position: center;"></div>
+            <div class="slide-item"><img src="assets/photos/events/touch-the-peak/ttp 4.jpeg" alt="Event" style="object-position: center; background: #fff; object-fit: contain;"></div>
+            <div class="slide-item"><img src="assets/photos/events/touch-the-peak/ttp 5.jpeg" alt="Event" style="object-position: center;"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-header">
+          <div>
+            <div class="tl-title">Member</div>
+            <div class="tl-company">ISACA Student Group, USJ</div>
+          </div>
+          <span class="tl-date" style="align-self: flex-start;">2023 - 2025</span>
+        </div>
+        <p style="color: var(--text-muted); font-size: 14px; margin-bottom: 16px;">Contributed to planning and executing 5+ professional and academic events, supporting stakeholder coordination in IT governance and cybersecurity.</p>
+        
+        <div class="photo-slider-container">
+          <div class="photo-slider-track">
+            <div class="slide-item"><img src="assets/photos/events/isaca/ss 1.jpeg" alt="Photo" style="object-position: top;"></div>
+            <div class="slide-item"><img src="assets/photos/events/isaca/ss 2.jpeg" alt="Photo" style="object-position: center;"></div>
+            <div class="slide-item"><img src="assets/photos/events/isaca/ss 3.jpeg" alt="Photo" style="object-position: center;"></div>
+            <div class="slide-item"><img src="assets/photos/events/isaca/ss 4.jpeg" alt="Photo" style="object-position: center;"></div>
+            <div class="slide-item"><img src="assets/photos/events/isaca/ss 6.jpeg" alt="Photo" style="object-position: center;"></div>
+            <div class="slide-item"><img src="assets/photos/events/isaca/ss 7.jpeg" alt="Photo" style="object-position: center;"></div>
+            <div class="slide-item"><img src="assets/photos/events/isaca/ss 8.jpeg" alt="Photo" style="object-position: top;"></div>
+            <div class="slide-item"><img src="assets/photos/events/isaca/ss 11.jpeg" alt="Photo" style="object-position: top;"></div>
+            <div class="slide-item"><img src="assets/photos/events/isaca/ss 12.jpeg" alt="Photo" style="object-position: center;"></div>
+            <div class="slide-item"><img src="assets/photos/events/isaca/ss 1.jpeg" alt="Photo" style="object-position: top;"></div>
+            <div class="slide-item"><img src="assets/photos/events/isaca/ss 2.jpeg" alt="Photo" style="object-position: center;"></div>
+            <div class="slide-item"><img src="assets/photos/events/isaca/ss 3.jpeg" alt="Photo" style="object-position: center;"></div>
+            <div class="slide-item"><img src="assets/photos/events/isaca/ss 4.jpeg" alt="Photo" style="object-position: center;"></div>
+            <div class="slide-item"><img src="assets/photos/events/isaca/ss 6.jpeg" alt="Photo" style="object-position: center;"></div>
+            <div class="slide-item"><img src="assets/photos/events/isaca/ss 7.jpeg" alt="Photo" style="object-position: center;"></div>
+            <div class="slide-item"><img src="assets/photos/events/isaca/ss 8.jpeg" alt="Photo" style="object-position: top;"></div>
+            <div class="slide-item"><img src="assets/photos/events/isaca/ss 11.jpeg" alt="Photo" style="object-position: top;"></div>
+            <div class="slide-item"><img src="assets/photos/events/isaca/ss 12.jpeg" alt="Photo" style="object-position: center;"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-header">
+          <div>
+            <div class="tl-title">Co-Chairperson</div>
+            <div class="tl-company">Sparsha – Talent Show &amp; Musical Event 2025</div>
+          </div>
+          <span class="tl-date" style="align-self: flex-start;">2025</span>
+        </div>
+        <p style="color: var(--text-muted); font-size: 14px; margin-bottom: 16px;">Led planning, coordination, and idea generation; managed teams, logistics, and media for an event with 200+ participants.</p>
+
+        <div class="photo-slider-container">
+          <div class="photo-slider-track" style="animation-duration: 45s;">
+            <div class="slide-item"><img src="assets/photos/events/sparsha/me 2.jpeg" alt="Sparsha Stage" style="object-position: center;"></div>
+            <div class="slide-item"><img src="assets/photos/events/sparsha/me 1.jpeg" alt="Sparsha Portrait" style="object-position: top;"></div>
+            <div class="slide-item"><img src="assets/photos/events/sparsha/me 3.jpeg" alt="Sparsha Group" style="object-position: center;"></div>
+            <div class="slide-item"><img src="assets/photos/events/sparsha/me 5.jpeg" alt="Sparsha Oil Lamp" style="object-position: center;"></div>
+            <div class="slide-item"><img src="assets/photos/events/sparsha/me 4.jpeg" alt="Sparsha Team" style="object-position: top;"></div>
+            <div class="slide-item"><img src="assets/photos/events/sparsha/me 6.jpeg" alt="Sparsha Audience" style="object-position: center;"></div>
+            <div class="slide-item"><img src="assets/photos/events/sparsha/me 7.jpeg" alt="Sparsha Duo" style="object-position: top;"></div>
+            <div class="slide-item"><img src="assets/photos/events/sparsha/me 8.jpeg" alt="Sparsha Large Group" style="object-position: center;"></div>
+            <div class="slide-item"><img src="assets/photos/events/sparsha/me 9.jpeg" alt="Sparsha Trio" style="object-position: top;"></div>
+            <div class="slide-item"><img src="assets/photos/events/sparsha/me 11.jpeg" alt="Sparsha Band" style="object-position: center;"></div>
+
+            <div class="slide-item"><img src="assets/photos/events/sparsha/me 2.jpeg" alt="Sparsha Stage" style="object-position: center;"></div>
+            <div class="slide-item"><img src="assets/photos/events/sparsha/me 1.jpeg" alt="Sparsha Portrait" style="object-position: top;"></div>
+            <div class="slide-item"><img src="assets/photos/events/sparsha/me 3.jpeg" alt="Sparsha Group" style="object-position: center;"></div>
+            <div class="slide-item"><img src="assets/photos/events/sparsha/me 5.jpeg" alt="Sparsha Oil Lamp" style="object-position: center;"></div>
+            <div class="slide-item"><img src="assets/photos/events/sparsha/me 4.jpeg" alt="Sparsha Team" style="object-position: top;"></div>
+            <div class="slide-item"><img src="assets/photos/events/sparsha/me 6.jpeg" alt="Sparsha Audience" style="object-position: center;"></div>
+            <div class="slide-item"><img src="assets/photos/events/sparsha/me 7.jpeg" alt="Sparsha Duo" style="object-position: top;"></div>
+            <div class="slide-item"><img src="assets/photos/events/sparsha/me 8.jpeg" alt="Sparsha Large Group" style="object-position: center;"></div>
+            <div class="slide-item"><img src="assets/photos/events/sparsha/me 9.jpeg" alt="Sparsha Trio" style="object-position: top;"></div>
+            <div class="slide-item"><img src="assets/photos/events/sparsha/me 11.jpeg" alt="Sparsha Band" style="object-position: center;"></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="involve-grid">
+
+      <div class="involve-card reveal" style="transition-delay:0.2s">
+        <div class="involve-icon">💰</div>
+        <div>
+          <div class="involve-title">Monetary & Finance Officer</div>
+          <div class="involve-org">Students' Association of IT (S@IT) · 2025</div>
+          <div class="involve-desc">Managed budgets and financial operations for multiple large-scale events while supporting event coordination, promotional campaigns, and post design.</div>
+        </div>
+      </div>
+
+      <div class="involve-card reveal" style="transition-delay:0.3s">
+        <div class="involve-icon">📷</div>
+        <div>
+          <div class="involve-title">Member · 2024</div>
+          <div class="involve-org">Japura Flames Photography Society</div>
+          <div class="involve-desc">Provided photography and visual content support for university events, contributing to digital media creation and event branding.</div>
+        </div>
+      </div>
+
+      <div class="involve-card reveal" style="transition-delay:0.4s">
+        <div class="involve-icon">🏆</div>
+        <div>
+          <div class="involve-title">Advisory Board Member &amp; Mentor</div>
+          <div class="involve-org">JXG D-Hack 2025 · S@IT</div>
+          <div class="involve-desc">Provided strategic direction for a 42-member organizing committee; mentored 5+ teams on UI/UX using Figma during the hackathon.</div>
+        </div>
+      </div>
+
+      <div class="involve-card reveal" style="transition-delay:0.5s">
+        <div class="involve-icon">🛡️</div>
+        <div>
+          <div class="involve-title">Logistic Committee Member</div>
+          <div class="involve-org">Cyber Summit 2025 · ISG USJ</div>
+          <div class="involve-desc">Supported event execution, including attendee coordination and development of marketing materials to enhance event visibility and audience engagement.</div>
+        </div>
+      </div>
+
+      <div class="involve-card reveal" style="transition-delay:0.6s">
+        <div class="involve-icon">🤝</div>
+        <div>
+          <div class="involve-title">CSR Project Coordinator</div>
+          <div class="involve-org">Sinasara 2025 · S@IT</div>
+          <div class="involve-desc">Coordinated a community initiative by managing logistics, designing promotional and reporting materials, and engaging 50+ participants to ensure effective outreach and impact.</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     CERTIFICATIONS
+============================================================ -->
+<section id="certifications">
+  <div class="container">
+    <div class="section-label">Credentials</div>
+    <h2 class="section-title">Certifications<span class="accent"></span></h2>
+    <div class="cert-grid">
+
+      <div class="cert-card reveal" style="transition-delay:0.05s; flex-direction: column; align-items: stretch; padding-bottom: 16px;">
+        <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 14px;">
+          <div class="cert-icon">🏅</div>
+          <div>
+            <div class="cert-title">ISTQB Certified Tester Foundation Level (CTFL)</div>
+            <div class="cert-issuer">Sri Lanka Software Testing Board (SLSTB) · 2026</div>
+          </div>
+        </div>
+        <a href="assets/pdf/certificates/ISTQBCertificate.pdf" target="_blank" title="Click to view full PDF" style="display: block; width: 100%; height: 150px; margin-top: auto; border-radius: 8px; overflow: hidden; border: 1px solid var(--border);">
+          <img src="assets/photos/certificates/ISTQBCertificate.svg" alt="ISTQB Certified Tester Foundation Level (CTFL) Certificate" style="width: 100%; height: 100%; object-fit: cover; object-position: top; transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+        </a>
+      </div>
+
+      <div class="cert-card reveal" style="transition-delay:0.1s;">
+        <div class="cert-icon">🔒</div>
+        <div>
+          <div class="cert-title">Cyber Security Fundamentals</div>
+          <div class="cert-issuer">APNIC Academy · 2025</div>
+        </div>
+      </div>
+      
+      <div class="cert-card reveal" style="transition-delay:0.1s; flex-direction: column; align-items: stretch; padding-bottom: 16px;">
+        <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 14px;">
+          <div class="cert-icon">🖥️</div>
+          <div>
+            <div class="cert-title">Operating Systems Basics</div>
+            <div class="cert-issuer">Cisco Networking Academy · 2025</div>
+          </div>
+        </div>
+        <a href="assets/pdf/certificates/Operating System Basic.pdf" target="_blank" title="Click to view full PDF" style="display: block; width: 100%; height: 150px; border-radius: 8px; overflow: hidden; border: 1px solid var(--border);">
+          <img src="assets/photos/certificates/Operating System Basic.jpg" alt="Operating Systems Basics Certificate" style="width: 100%; height: 100%; object-fit: cover; object-position: top; transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+        </a>
+      </div>
+
+      <div class="cert-card reveal" style="transition-delay:0.2s; flex-direction: column; align-items: stretch; padding-bottom: 16px;">
+        <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 14px;">
+          <div class="cert-icon">☕</div>
+          <div>
+            <div class="cert-title">Intro to Java / HTML / CSS / SQL</div>
+            <div class="cert-issuer">Sololearn</div>
+          </div>
+        </div>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+          <a href="assets/pdf/certificates/java.pdf" target="_blank" title="Click to view Java PDF" style="display: block; width: 100%; height: 90px; border-radius: 6px; overflow: hidden; border: 1px solid var(--border);">
+            <img src="assets/photos/certificates/java.jpg" alt="Java Certificate" style="width: 100%; height: 100%; object-fit: cover; object-position: top; transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+          </a>
+          <a href="assets/pdf/certificates/html.pdf" target="_blank" title="Click to view HTML PDF" style="display: block; width: 100%; height: 90px; border-radius: 6px; overflow: hidden; border: 1px solid var(--border);">
+            <img src="assets/photos/certificates/html.jpg" alt="HTML Certificate" style="width: 100%; height: 100%; object-fit: cover; object-position: top; transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+          </a>
+          <a href="assets/pdf/certificates/css.pdf" target="_blank" title="Click to view CSS PDF" style="display: block; width: 100%; height: 90px; border-radius: 6px; overflow: hidden; border: 1px solid var(--border);">
+            <img src="assets/photos/certificates/css.jpg" alt="CSS Certificate" style="width: 100%; height: 100%; object-fit: cover; object-position: top; transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+          </a>
+          <a href="assets/pdf/certificates/sql.pdf" target="_blank" title="Click to view SQL PDF" style="display: block; width: 100%; height: 90px; border-radius: 6px; overflow: hidden; border: 1px solid var(--border);">
+            <img src="assets/photos/certificates/sql.jpg" alt="SQL Certificate" style="width: 100%; height: 100%; object-fit: cover; object-position: top; transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+          </a>
+        </div>
+      </div>
+
+      <div class="cert-card reveal" style="transition-delay:0.3s; flex-direction: column; align-items: stretch; padding-bottom: 16px;">
+        <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 14px;">
+          <div class="cert-icon">🧪</div>
+          <div>
+            <div class="cert-title">Selenium WebDriver with Java</div>
+            <div class="cert-issuer">TestAutomationu.com</div>
+          </div>
+        </div>
+        <a href="assets/pdf/certificates/selenium.pdf" target="_blank" title="Click to view Selenium PDF" style="display: block; width: 100%; height: 150px; border-radius: 8px; overflow: hidden; border: 1px solid var(--border);">
+          <img src="assets/photos/certificates/selenium.png" alt="Selenium Certificate" style="width: 100%; height: 100%; object-fit: cover; object-position: top; transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+        </a>
+      </div>
+
+      <div class="cert-card reveal" style="transition-delay:0.4s; flex-direction: column; align-items: stretch; padding-bottom: 16px;">
+        <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 14px;">
+          <div class="cert-icon">👁️</div>
+          <div>
+            <div class="cert-title">Modern Functional Test Automation</div>
+            <div class="cert-issuer">TestAutomationu.com</div>
+          </div>
+        </div>
+        <a href="assets/pdf/certificates/Ai Testing.pdf" target="_blank" title="Click to view AI Testing PDF" style="display: block; width: 100%; height: 150px; border-radius: 8px; overflow: hidden; border: 1px solid var(--border);">
+          <img src="assets/photos/certificates/Ai Testing.png" alt="Modern Functional Test Automation Certificate" style="width: 100%; height: 100%; object-fit: cover; object-position: top; transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     CONTACT
+============================================================ -->
+<section id="contact">
+  <div class="container">
+    <div class="section-label">Get In Touch</div>
+    <h2 class="section-title">Contact <span class="accent">Me</span></h2>
+    <form action="https://formspree.io/f/mbdqgvbp" method="POST" class="contact-form reveal">
+      <div class="form-group">
+        <label class="form-label">Your Name</label>
+        <input type="text" name="name" class="form-input" placeholder="John Doe" id="form-name" required />
+      </div>
+      <div class="form-group">
+        <label class="form-label">Email Address</label>
+        <input type="email" name="email" class="form-input" placeholder="john@example.com" id="form-email" required />
+      </div>
+      <div class="form-group">
+        <label class="form-label">Message</label>
+        <textarea name="message" class="form-textarea" placeholder="Tell me about your project or opportunity..." id="form-message" required></textarea>
+      </div>
+      <button type="submit" class="form-submit" id="form-btn">Send Message →</button>
+    </form>
+  </div>
+</section>
+
+<!-- ============================================================
+     FOOTER
+============================================================ -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-name syne">Sachintha <span class="accent">Jayarathna</span></div>
+    <div class="footer-links">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#education">Education</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="footer-copy">© 2026 Sachintha Jayarathna</div>
+  </div>
+</footer>
+
+<button id="scroll-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Back to top">↑</button>
+
+<script src="assets/js/script.js"></script>
+</body>
+</html>
